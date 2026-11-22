@@ -1,0 +1,22 @@
+{
+  "name": "ice-core",
+  "version": "1.0.0",
+  "description": "Расчётное ядро интерактивной модели ДВС: кинематика, термодинамика, теплообмен, динамика, газораспределение",
+  "main": "src/index.js",
+  "browser": "dist/ice-core.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build": "node tools/bundle.js",
+    "calc": "node calc/run-all.js",
+    "figures": "python3 figures/make_all.py",
+    "report": "bash report/build.sh",
+    "all": "npm run build && npm test && npm run calc && npm run figures && npm run report"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true,
+  "devDependencies": {
+    "docx": "^9.8.1"
+  }
+}
